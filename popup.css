@@ -1,0 +1,109 @@
+﻿/*reset*/
+.f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-cb,.f-cbli li{zoom:1;}
+.f-fl{float:left;}
+.f-fr{float:right;}
+.f-pr{position:relative;}
+.f-pa{position:absolute;}
+.f-bg{	background-color: #fff; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);}
+.f-thide { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* icommon 字体*/
+@font-face {
+	font-family: 'icomoon';
+	src:url('icommon/fonts/icomoon.eot?-mkfy5a');
+	src:url('icommon/fonts/icomoon.eot?#iefix-mkfy5a') format('embedded-opentype'),
+		url('icommon/fonts/icomoon.woff?-mkfy5a') format('woff'),
+		url('icommon/fonts/icomoon.ttf?-mkfy5a') format('truetype'),
+		url('icommon/fonts/icomoon.svg?-mkfy5a#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.f-icon{
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 14px;
+	color: #333;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	width: 400px;
+	padding: 10px;
+	font-size:12px;
+	min-height: 300px;
+	scrollbar-face-color: #fcfcfc; 
+}
+
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+::-webkit-scrollbar-track-piece
+{
+    background-color: #fff;
+}
+
+.hoversh{padding:3px 5px; background-color: #fff; opacity: 0.8; color: #fff;}
+.toast{height: 24px; line-height: 24px; top: 50%;margin-top:-12px; left: 45%; z-index: 3000; padding: 0 7px; border-radius: 4px;}
+.toast .cnt{color:#fff;}
+.toast .icon{color:#fff; margin-right: 5px;}
+.toast.wrong{background-color: red;}
+.toast.right{background-color: green;}
+.title{margin-bottom: 10px; text-align: center;}
+.tool{padding: 5px; background: -webkit-gradient(linear, 50% 50%, 50% 50%, from(#dbedfa), to(#fff)); border-radius: 3px;}
+.tool span{margin-right: 8px;}
+.tool span.f-icon:hover{cursor: pointer;}
+.tool span.f-icon:hover{color:#0F9730;}
+.indialog{
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: -45px;
+	width: 200px;
+	height: 90px;
+	z-index: 2000;
+	border: 1px solid #eee;
+	padding: 10px;
+	text-align: center;
+}
+.confirmdialog{
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: -30px;
+	width: 117px;
+	height: 65px;
+	z-index: 2000;
+	border: 1px solid #eee;
+	padding: 5px 10px;
+	text-align: center;
+}
+.confirmdialog .title{text-align: left;}
+.confirmdialog .opts{border: 1px solid #ccc; border-radius: 4px; padding: 5px; cursor: pointer; margin: 0 10px;}
+.confirmdialog .opts:hover{color: #fff; background-color: green;}
+#list{height: 240px; overflow-y: scroll;}
+#list .litem{height: 20px; line-height: 20px; padding: 0 4px; cursor: default; margin: 4px 0; border-radius: 4px; color:#999;}
+#list .litem .id{width: 160px;}
+#list .litem .type{width: 160px;}
+#list .litem .sel{color: #ddd;height: 20px; line-height: 20px; font-size: 12px; margin-right: 5px;}
+#list .litem.selected{color: #333;}
+#list .litem.selected .sel{color: green;}
+#list .litem .edit{color: #ddd;margin-right:8px; font-size: 12px;}
+#list .litem .del{color: #ddd;font-size: 12px;}
+#list .litem .edit:hover, #list .litem .del:hover{color: green; cursor: pointer;}
+#list .litem:hover{background-color: #C6F0F1;}
+
+.indialog span{font-size: 12px; margin-right: 5px;}
+.indialog .item{height: 30px; line-height: 30px;}
+.indialog #loginId{width: 120px;}
+.indialog #description{width: 120px;}
+.cover{display:none; left: 0; right: 0; bottom: 0; top: 0; background-color: #fff; opacity: 0.6; z-index: 1000;}

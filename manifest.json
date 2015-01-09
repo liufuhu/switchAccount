@@ -1,0 +1,23 @@
+﻿{
+	"manifest_version": 2,
+	"name": "账号切换 beta版",
+	"version": "0.0.1",
+	"author": "liufuhu yangzhou",
+	"background": { "scripts": ["const.js", "jquery-2.0.0.min.js", "background.js"] },
+	"page_action": {
+		"default_icon": {
+			"19": "switch_19.png",
+			"38": "switch_38.png"
+		},
+		"default_title": "切换账号", // shown in tooltip
+		"default_popup": "popup.html"
+	},
+	"intro_page": "intro.html",
+	"permissions" : ["tabs","http://*/*", "https://*/*", "storage"],
+	"content_scripts":[
+		{
+			"matches":["http://study.163.com/*", "http://mooc.study.163.com/*", "http://www.icourse163.org/*"],
+			"js":["const.js", "jquery-2.0.0.min.js", "content_script.js"]
+		}
+	]
+}
