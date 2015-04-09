@@ -20,6 +20,9 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
 
+// 有popup.html时 事件是无效的
+chrome.pageAction.onClicked.addListener(checkForValidUrl);
+
 chrome.runtime.onMessage.addListener(function(request, sender, sendRequest){
 	switch(request.type){
 		case EVENTS.GET_LOGIN_PASSPORT:

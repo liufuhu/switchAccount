@@ -85,7 +85,7 @@ function newDialogOpt(isShow, time, obj){
 			var loginId = $("#loginId").val();
 			var type = $("#description").val();
 
-			var mailReg =  /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+			var mailReg =  /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
 			if(!loginId || !mailReg.test(loginId)){
 				showToast(false, "请输入邮箱");
 				return;
